@@ -76,15 +76,15 @@ This car represents an object, and it has a few **properties**, four of them. Fo
 An object can also have **methods** that represents an action that the object can do. Methods are in reality just functions but as soon functions are connected to a specific object it becomes a method. Let's add some method to our car.
 
 ```js
-const car = {
-  make: "Volvo",
-  model: "V70",
-  year: 2016,
-  manualTransmission: true,
-  start: function () {
-    console.log("The car is running");
-  },
-};
+// const car = {
+//   make: "Volvo",
+//   model: "V70",
+//   year: 2016,
+//   manualTransmission: true,
+//   start: function () {
+//     console.log("The car is running");
+//   },
+// };
 ```
 
 [Back to top](#javascript-objects)
@@ -116,7 +116,7 @@ const person = {
 person.fullName();
 ```
 
-In this example, `this` is used to refer to the obeject's own properties. If we don't use `this` here it will first look inside the function's own scope, and then it it doesn't find any variable it will look in the parent scope.
+In this example, `this` is used to refer to the obeject's own properties. If we don't use `this` here it will first look inside the function's own scope, and then it doesn't find any variable it will look in the parent scope.
 
 ```js
 const firstName = "Henrik";
@@ -134,7 +134,8 @@ const person = {
 person.fullName(); // Henrik Fähnrich
 ```
 
-Since the variable `firstName` exists in the parent scope this will be used instead of the intended property of the object.
+Since the variable `firstName` exists in the parent scope this will be used instead of the intended property 
+of the object.
 
 [Back to top](#javascript-objects)
 
@@ -295,7 +296,7 @@ for (let key in car) {
 }
 ```
 
-Dot-notation doesn't work it this case and that is because the `key` here is a dynamnic value that changes in every iteration, and it is actually the same as the string value of the given key that is currently iterated over. When we use dot-notation like this we actually looks for the property in a literal sense, and that doesn't exist in the car object.
+Dot-notation doesn't work in this case and that is because the `key` here is a dynamnic value that changes in every iteration, and it is actually the same as the string value of the given key that is currently iterated over. When we use dot-notation like this we actually looks for the property in a literal sense, and that doesn't exist in the car object.
 
 We need to use the array-like-synatx instead. Let's rewrite the loop:
 
